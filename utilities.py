@@ -57,8 +57,7 @@ def llm_instance(user_question):
 
     return chain
 
-from google.colab import userdata
-
+# Task 5: process users query
 def user_input(question):
     embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001", google_api_key=gemini_key)
 
@@ -73,4 +72,4 @@ def user_input(question):
         , return_only_outputs=True)
     return response['output_text']
 
-
+print("Everything fine")
